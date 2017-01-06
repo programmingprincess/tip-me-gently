@@ -28,13 +28,13 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://imgur.com/a/ZC29k' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='http://i.imgur.com/Dyo5HGH.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+Mainly having experience with JavaScript and AJAX, learning how to use PHP for forms was a new experience for me. I saw a lot of parallels with Java Servlet server communications. 
 
 ## License
 
