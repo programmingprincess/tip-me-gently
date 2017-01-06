@@ -4,10 +4,18 @@
 	<link href="main.css" rel="stylesheet" type="text/css">
 </head>
 <?php
+
+	function is_valid($num) {
+		if(is_numeric($num) && $num >= 0)
+			return true;
+		else
+			return false;
+	}
+
 	//when submit button is pressed
 	if(isset($_POST['submit'])) {
 		//values must be numeric
-		if(is_numeric($_POST['subtotal']) && (is_numeric($_POST['percentage']) || (($_POST['percentage'] == "custom") && is_numeric($_POST['custom']))) && is_numeric($_POST['split'])) {	
+		if(is_valid($_POST['subtotal']) && (is_numeric($_POST['percentage']) || (($_POST['percentage'] == "custom") && is_valid($_POST['custom']))) && is_valid($_POST['split'])) {	
 			$subtotal = $_POST['subtotal'];
 			$tip_percentage = $_POST['percentage'];
 			if(is_numeric($_POST['percentage'])) {
@@ -28,20 +36,20 @@
 
 		} else {
 
-			if(!is_numeric($_POST['subtotal'])) {
-				$billError = "Please enter a numeric value.";
+			if(!is_valid($_POST['subtotal'])) {
+				$billError = "Please enter a valid numeric value.";
 			} else {
 				$billError = "";
 			}
 
-			if((!is_numeric($_POST['percentage']) && $_POST['percentage'] != "custom") || ($_POST['percentage'] == "custom" && !is_numeric($_POST['custom'])))  {
-				$tipError = "Please select a numeric value.";
+			if((!is_numeric($_POST['percentage']) && $_POST['percentage'] != "custom") || ($_POST['percentage'] == "custom" && (!is_valid($_POST['custom']))))  {
+				$tipError = "Please select a valid numeric value.";
 			} else {
 				$tipError = "";
 			}
 
-			if(!is_numeric($_POST['split']))  {
-				$payerError = "Please enter a numeric value.";
+			if(!is_valid($_POST['split']))  {
+				$payerError = "Please enter a valid numeric value.";
 			} else {
 				$payerError = "";
 			}
