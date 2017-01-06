@@ -1,7 +1,79 @@
-.bill-subtotal h3 {
+body {
+	font-family: 'Roboto', sans-serif;
+	text-align: center;
+}
+
+.container {
+	border: 1px solid black;
+	display: inline-block;
+	padding: 30px;
+	margin: 0 auto;
+}
+
+h1, h4 {
+	display: inline;
+}
+
+h1 {
+	font-weight: 600;
+	color: #F45B69;
+}
+
+h3 {
+	margin: 25px 0 5px 0;
+	font-weight: 500;
+}
+
+form {
+	text-align: left;
+}
+
+.bill-subtotal h3,
+.bill-subtotal input,
+.label {
 	display: inline-block;
 }
 
-.bill-subtotal input {
-	display: inline-block;
+input.subtotal {
+	width: 50px;
+	height: 25px;
+	font-size: 14px;
 }
+
+.label {
+	margin: 5px 10px 5px 0px;
+}
+
+input.custom {
+    width: 30px;
+    height: 25px;
+    margin: 10px 0px;
+    font-size: 14px;
+}
+
+
+input[type=submit] {
+    background-color: #F45B69;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+
+input[type=submit]:hover {
+    background-color: #fff;
+    color: #F45B69;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border: 2px solid #F45B69;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+
+
